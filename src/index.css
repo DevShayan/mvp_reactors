@@ -1,0 +1,23 @@
+@import "tailwindcss";
+
+@font-face {
+  font-family: "PP Telegraf";
+  src: url('./assets/fonts/pp_telegraf/PPTelegraf-Regular.otf') format("opentype");
+  font-weight: 100;
+}
+
+@font-face {
+  font-family: "Satoshi";
+  src: url('./assets/fonts/satoshi/Satoshi-Variable.ttf') format("opentype");
+}
+
+body {
+    background-color: black;
+    color: white;
+    font-family: "PP Telegraf";
+}
+
+button {
+    font-family: "Satoshi";
+    cursor: pointer;
+}
