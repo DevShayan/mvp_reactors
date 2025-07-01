@@ -18,6 +18,8 @@ import Card4 from "../components/Card4";
 import { useMediaQuery } from "../hooks/MediaHook";
 import Sec2Small from "../components/Sec2Small";
 import Sec2Large from "../components/Sec2Large";
+import Sec4Small from "../components/Sec4Small";
+import Sec4Large from "../components/Sec4Large";
 
 export default function Home() {
   const isSmall = useMediaQuery("(max-width: 639px)");
@@ -79,29 +81,7 @@ export default function Home() {
         <CButton text="Book a free discovery call" />
       </div>
       {/* Section 4 */}
-      <div className="w-full flex flex-col items-center mt-[80px] sm:mt-[180px]">
-        <h1 className="text-[32px] font-[800] leading-[130%] mb-[80px] text-center sm:text-[48px] sm:leading-[100%]">Real Results from Real Founders</h1>
-        <Marquee autoFill={ true } className="mb-[32px]">
-          <Card3
-            subtitle="Sarah B., Healthtech Founder"
-            heading="Raised $50K angel investment within 10 days."
-            text="“I pitched my MVP the same week I hired them. It worked flawlessly, and investors loved the speed.”" />
-        </Marquee>
-        <Marquee direction="right" autoFill={ true }>
-          <Card4
-            subtitle="Sarah B., Healthtech Founder"
-            heading="Raised $50K angel investment within 10 days."
-            text="“I pitched my MVP the same week I hired them. It worked flawlessly, and investors loved the speed.”" />
-        </Marquee>
-        {
-          isSmall && <Marquee autoFill={ true } className="mt-[32px]">
-            <Card4
-              subtitle="Sarah B., Healthtech Founder"
-              heading="Raised $50K angel investment within 10 days."
-              text="“I pitched my MVP the same week I hired them. It worked flawlessly, and investors loved the speed.”" />
-          </Marquee>
-        }
-      </div>
+      { isSmall ? <Sec4Small /> : <Sec4Large /> }
       {/* Section 5 */}
       <div className="max-w-[1360px] w-full flex flex-col items-center mt-[80px] sm:mt-[180px]">
         <h1 className="text-[32px] font-[800] leading-[130%] mb-[6px] sm:mb-[80px] sm:text-[48px] sm:leading-[100%] text-center">Frequently Asked Questions</h1>

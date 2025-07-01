@@ -1,8 +1,8 @@
 import rating from "../assets/images/rating.png";
 
-export default function Card3({ subtitle, heading, text }) {
+export default function Card3({ subtitle, heading, text, className }) {
   return (
-    <div className="w-screen sm:w-[608px] flex flex-col gap-[16px] rounded-[32px] p-[32px] border border-[#FFFFFF33] bg-[#FFFFFF03] backdrop-blur-[17px] overflow-hidden mx-[16px]">
+    <div className={"sm:max-w-[608px] flex flex-col gap-[16px] rounded-[32px] p-[32px] border border-[#FFFFFF33] bg-[#FFFFFF03] backdrop-blur-[17px] overflow-hidden mx-[16px] " + className}>
       <p className="text-[12px] leading-[150%]">{ subtitle }</p>
       <img className="w-[152px]" src={ rating } />
       <h1 className="text-[20px] leading-[120%] font-[800]">{ heading }</h1>
